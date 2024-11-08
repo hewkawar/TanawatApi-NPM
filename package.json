@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "release": "npm run build && npm publish && npm version patch && git push && git push --tags",
+    "release": "npm run build && npm publish && npm version patch",
     "lint": "tsc",
     "test": "npm link"
   },
