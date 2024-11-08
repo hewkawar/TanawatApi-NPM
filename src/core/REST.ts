@@ -4,7 +4,8 @@ import { requestOptions, RESTOptions } from "../types/interface";
 export class REST {
     public version = "v1";
     public base = "https://hewkawar.xyz/api";
-    public makeRequest = "fetch" as "fetch" | "axios";
+    
+    private makeRequest = "fetch" as "fetch" | "axios";
 
     private async request(method: string, path: string, options?: requestOptions) {
         const url = `${this.base}/${this.version}${path}`;
