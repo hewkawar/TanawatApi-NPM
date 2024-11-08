@@ -1,7 +1,12 @@
-export function DiscordUser(userId: string) {
+function DiscordUser(userId: string) {
   return `/discord/users/${userId}`;
 }
 
-export function Spotify() {
-    return `/spotify`;
+function Spotify() {
+  return `/spotify`;
 }
+
+export const Routes = {
+  DiscordUser,
+  Spotify
+};
