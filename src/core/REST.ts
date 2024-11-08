@@ -2,13 +2,13 @@ import axios from "axios";
 import { requestOptions, RESTOptions } from "../types/interface";
 
 export class REST {
-    public version = "v1";
+    public version = "1";
     public base = "https://hewkawar.xyz/api";
-    
+
     private makeRequest = "fetch" as "fetch" | "axios";
 
     private async request(method: string, path: string, options?: requestOptions) {
-        const url = `${this.base}/${this.version}${path}`;
+        const url = `${this.base}/v${this.version}${path}`;
         if (this.makeRequest === "fetch") {
             const headers = {
                 "Content-Type": "application/json",
